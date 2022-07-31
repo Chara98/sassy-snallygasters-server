@@ -3,7 +3,7 @@
 
 import fastapi
 
-from ...setup.setup import Setup
+from ..setup.setup import Setup
 from ..utils import data
 
 route = fastapi.APIRouter()

@@ -6,7 +6,7 @@ import os
 
 import asyncpg
 
-from ..server.database import db
+from ..database import db
 
 
 class Setup:
@@ -22,11 +22,11 @@ class Setup:
         Uses asyncpg to connect to the database. Fetches keys from the environment.
         """
         self.pool = await asyncpg.create_pool(
-            user=os.getenv("PGUSER"),
-            password=os.getenv("PGPASSWORD"),
-            host=os.getenv("PGHOST"),
-            port=os.getenv("PGPORT"),
-            database=os.getenv("PGDATABASE"),
+            user='postgres',
+            password='knfTlGQ7XFMtZw5kIkth',
+            host='containers-us-west-36.railway.app',
+            port=6074,
+            database='railway',
             ssl="require",
             loop=asyncio.get_event_loop(),
         )
