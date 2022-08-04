@@ -28,7 +28,7 @@ async def join_game(code: str, username: str) -> dict:
     :param username:
     :return:
     """
-    for k, v in active_game.items():
+    for v in active_game.values():
         if v['code'] == code:
             if len(v['players']) == 1 and username not in v['players']:
                 v['players'].append(username)
